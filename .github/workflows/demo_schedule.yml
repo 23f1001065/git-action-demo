@@ -10,21 +10,13 @@ jobs:
     permissions: 
       contents: write            
     steps:
-      - name: List files in workspace
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add create_json.py
-          git commit -m "created new py file"
-          git push
-          
       - name: 23f1001065@ds.study.iitm.ac.in
-        run: python create_json.py
+        run: echo "helllllllllllllllllllllllllllllllllo"
       
       - name: commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add *.json
-          git commit -m "created new file"
+          git commit -m "created new file" || echo "No changes to commit"
           git push
