@@ -10,10 +10,10 @@ jobs:
     permissions: 
       contents: write            
     steps:
-      - name: 23f1001065@ds.study.iitm.ac.in
-        run: python create_json.py
       - name: List files in workspace
         run: ls -R
+      - name: 23f1001065@ds.study.iitm.ac.in
+        run: python create_json.py
       
       - name: commit and push changes
         run: |
