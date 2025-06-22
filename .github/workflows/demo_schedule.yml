@@ -2,7 +2,7 @@ name: test-schedule-demo
 
 on:
   schedule:
-    - cron: "* * * * *"
+    - cron: "36 2 * * *"
   workflow_dispatch:
 jobs:
   test_schedule:                      
@@ -16,6 +16,8 @@ jobs:
         uses: actions/checkout@v3
       - name: setup python
         uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
       - name: runing create_json
         run: python3 create_json.py
       - name: commit new file
