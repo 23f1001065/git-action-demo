@@ -2,8 +2,7 @@ name: test-schedule-demo
 
 on:
   schedule:
-    - cron: "36 2 * * *"
-  workflow_dispatch:
+    - cron: "0 3 * * *"
 jobs:
   test_schedule:                      
     runs-on: ubuntu-latest 
